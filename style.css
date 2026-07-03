@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc !important;
+}
+
+.text-primary {
+    color: #7c3aed !important; /* Logo e links em roxo */
+}
+
+.btn-primary {
+    background-color: #7c3aed !important;
+    border-color: #7c3aed !important;
+    font-weight: 500;
+    border-radius: 8px; /* Cantos mais suaves e modernos */
+    padding: 0.5rem 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6d28d9 !important; /* Roxo ligeiramente mais escuro no hover */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+.btn-outline-primary {
+    color: #7c3aed !important;
+    border-color: #7c3aed !important;
+    border-radius: 8px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7c3aed !important;
+    color: #ffffff !important;
+}
+
+.card {
+    border-radius: 16px !important; /* Cantos bem arredondados nos anúncios */
+    overflow: hidden; /* Garante que a imagem siga o arredondado */
+    border: 1px solid rgba(124, 58, 237, 0.08) !important; /* Borda roxa quase invisível */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(124, 58, 237, 0.08) !important;
+}
+
+.form-control {
+    border-radius: 8px !important;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 1rem;
+}
+
+.form-control:focus {
+    border-color: #a78bfa !important; /* Borda roxa ao clicar na busca */
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15) !important;
+}
+
+/* 4. Tipografia e Cores de Texto */
+h1, h2, h3, .card-title {
+    color: #1e1b4b !important; /* Títulos no roxo escuro profundo */
+    letter-spacing: -0.02em; /* Deixa os títulos mais robustos */
+}
+
+/* Customização para o preço chamar atenção de forma elegante */
+.text-dark.fw-bold.h5 {
+    color: #7c3aed !important; /* O preço pode herdar o roxo principal */
+}
+
+/* Placeholder da foto com um tom de roxo bem sutil no fundo */
+.bg-secondary {
+    background-color: #f3e8ff !important; 
+}
+.bg-secondary .text-muted {
+    color: #a855f7 !important;
+}
+
+/* Ajustes para os novos componentes de filtro */
+.form-select {
+    border-radius: 8px !important;
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 1rem;
+    color: #1e1b4b;
+}
+
+.form-select:focus {
+    border-color: #a78bfa !important;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15) !important;
+}
+
+/* Deixa o ícone de localização combinando com o input */
+.input-group-text {
+    border-radius: 8px 0 0 8px !important;
+    border: 1px solid #e2e8f0;
+    color: #a855f7 !important; /* Ícone sutilmente roxo */
+}
+
+.input-group .form-control {
+    border-radius: 0 8px 8px 0 !important;
+}
