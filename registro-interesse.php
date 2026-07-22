@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Motors - Registrar Interesse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-light py-5">
 
@@ -16,9 +16,9 @@
             </div>
             <div class="col-12 col-md-6 text-center text-md-end">
                 <nav>
-                    <a href="pagina-principal-externa.html" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Home</a>
-                    <a href="pagina-login.html" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Vender</a>
-                    <a href="pagina-login.html" class="btn btn-primary btn-sm ms-2 px-3">Entrar</a>
+                    <a href="index.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Home</a>
+                    <a href="pagina-login.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Vender</a>
+                    <a href="pagina-login.php" class="btn btn-primary btn-sm ms-2 px-3">Entrar</a>
                 </nav>
             </div>
         </div>
@@ -28,26 +28,28 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-6">
 
-                <a href="anuncio-publico.html?id=1" class="text-decoration-none text-secondary small d-inline-block mb-3">&larr; Voltar para o anúncio</a>
+                <a href="index.php" class="text-decoration-none text-secondary small d-inline-block mb-3">&larr; Voltar para o anúncio</a>
 
                 <div class="card shadow-sm p-4 border-0 bg-white">
                     <h2 class="h4 fw-bold text-dark mb-1">Registrar Interesse</h2>
                     <p class="text-muted mb-4" id="valorMarcaModelo">Honda Civic EXL &middot; R$ 89.000,00</p>
 
-                    <form id="formInteresse">
+                    <form id="formInteresse" action="actions/interesse_action.php" method="POST">
+                        <input type="hidden" name="anuncio_id" value="<?php echo $_GET['id'] ?? 1; ?>">
+
                         <div class="mb-3">
                             <label for="campoNome" class="form-label small fw-semibold text-muted">Nome</label>
-                            <input type="text" id="campoNome" class="form-control" placeholder="Digite seu nome completo" required>
+                            <input type="text" id="campoNome" name="nome" class="form-control" placeholder="Digite seu nome completo" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="campoTelefone" class="form-label small fw-semibold text-muted">Telefone</label>
-                            <input type="tel" id="campoTelefone" class="form-control" placeholder="(34) 99999-9999" required>
+                            <input type="tel" id="campoTelefone" name="telefone" class="form-control" placeholder="(34) 99999-9999" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="campoMensagem" class="form-label small fw-semibold text-muted">Mensagem</label>
-                            <textarea id="campoMensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem de interesse..." required></textarea>
+                            <textarea id="campoMensagem" name="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem de interesse..." required></textarea>
                         </div>
 
                         <div id="msgInteresse" class="text-success mt-1 mb-3 fs-7"></div>
@@ -64,6 +66,6 @@
         <p>&copy; 2026 - Big Motors. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="interesse.js"></script>
+    <script src="assets/js/interesse.js"></script>
 </body>
 </html>

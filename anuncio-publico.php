@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Motors - Detalhes do Anúncio</title>
+    <title>Big Motors - Detalhes do Veículo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-light py-5">
 
     <header class="card shadow-sm p-3 mb-4 bg-white container">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <h1 class="h3 m-0 text-primary fw-bold">Big Motors <span class="fs-6 text-muted fw-normal">| Painel</span></h1>
+                <h1 class="h3 m-0 text-primary fw-bold">Big Motors</h1>
             </div>
             <div class="col-12 col-md-6 text-center text-md-end">
                 <nav>
-                    <a href="listagem-anuncios.html" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
-                    <a href="pagina-principal-externa.html" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
+                    <a href="index.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Home</a>
+                    <a href="pagina-login.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Vender</a>
+                    <a href="pagina-login.php" class="btn btn-primary btn-sm ms-2 px-3">Entrar</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main class="container my-5">
-        <a href="listagem-anuncios.html" class="text-decoration-none text-secondary small d-inline-block mb-3">&larr; Voltar para Meus Anúncios</a>
+        <a href="index.php" class="text-decoration-none text-secondary small d-inline-block mb-3">&larr; Voltar para a busca</a>
 
         <div class="card shadow-sm border-0 bg-white p-4">
             <div class="row g-4">
@@ -73,7 +74,7 @@
                     <h3 class="h6 fw-bold text-dark">Descrição</h3>
                     <p class="text-muted" id="valorDescricao">Único dono, revisões feitas sempre na concessionária, pneus novos e multimídia original. Aceito troca com volta.</p>
 
-                    <a href="listagem-interesses.html?id=1" class="btn btn-outline-primary btn-sm mt-2">Ver interesses neste anúncio</a>
+                    <a href="registro-interesse.php?id=1" class="btn btn-primary mt-2">Tenho interesse</a>
                 </div>
 
             </div>

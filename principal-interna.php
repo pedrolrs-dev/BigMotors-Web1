@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/auth_check.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +8,7 @@
     <title>Big Motors - Painel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="bg-light py-5">
@@ -15,14 +16,12 @@
     <header class="card shadow-sm p-3 mb-4 bg-white container">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <h1 class="h3 m-0 text-primary fw-bold">Big Motors <span class="fs-6 text-muted fw-normal">|
-                        Painel</span></h1>
+                <h1 class="h3 m-0 text-primary fw-bold">Big Motors <span class="fs-6 text-muted fw-normal">| Painel</span></h1>
             </div>
             <div class="col-12 col-md-6 text-center text-md-end">
                 <nav>
-                    <a href="listagem-anuncios.html"
-                        class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
-                    <a href="pagina-principal-externa.html" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
+                    <a href="listagem-anuncios.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
+                    <a href="actions/logout_action.php" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
                 </nav>
             </div>
         </div>
@@ -30,7 +29,7 @@
 
     <main class="container my-5">
 
-        <h2 class="h4 fw-bold text-dark mb-1">Olá, Carlos!</h2>
+        <h2 class="h4 fw-bold text-dark mb-1">Olá, <?php echo htmlspecialchars($_SESSION['usuario_nome'] ?? 'Anunciante'); ?>!</h2>
         <p class="text-muted mb-4">Bem-vindo de volta ao seu painel do Big Motors.</p>
 
         <div class="row g-3 mb-4">
@@ -41,14 +40,13 @@
                 </div>
             </div>
             <div class="col-6 col-md-3">
-                <a href="listagem-interesses.html" class="text-decoration-none">
+                <a href="listagem-interesses.php" class="text-decoration-none">
                     <div class="card shadow-sm border-0 bg-white p-3 text-center">
                         <p class="h4 fw-bold text-primary mb-0">2</p>
                         <p class="text-muted small mb-0">Interesses recebidos</p>
                     </div>
                 </a>
             </div>
-        </div>
         </div>
 
         <div class="row g-4">
@@ -57,7 +55,7 @@
                     <i class="bi bi-plus-circle text-primary mb-3" style="font-size: 2rem;"></i>
                     <h3 class="h5 fw-bold text-dark mb-1">Criar novo anúncio</h3>
                     <p class="text-muted mb-3">Cadastre um veículo para vender no Big Motors.</p>
-                    <a href="novo-anuncio.html" class="btn btn-primary mt-auto align-self-start">Novo Anúncio</a>
+                    <a href="novo-anuncio.php" class="btn btn-primary mt-auto align-self-start">Novo Anúncio</a>
                 </div>
             </div>
 
@@ -66,8 +64,7 @@
                     <i class="bi bi-card-list text-primary mb-3" style="font-size: 2rem;"></i>
                     <h3 class="h5 fw-bold text-dark mb-1">Meus anúncios</h3>
                     <p class="text-muted mb-3">Veja, acompanhe interesses ou remova os veículos que você anunciou.</p>
-                    <a href="listagem-anuncios.html" class="btn btn-outline-primary mt-auto align-self-start">Ver
-                        Anúncios</a>
+                    <a href="listagem-anuncios.php" class="btn btn-outline-primary mt-auto align-self-start">Ver Anúncios</a>
                 </div>
             </div>
         </div>

@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/auth_check.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Motors - Meus Anúncios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-light py-5">
 
@@ -16,8 +17,8 @@
             </div>
             <div class="col-12 col-md-6 text-center text-md-end">
                 <nav>
-                    <a href="listagem-anuncios.html" class="btn btn-link text-decoration-none text-primary fw-bold px-2">Meus Anúncios</a>
-                    <a href="pagina-principal-externa.html" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
+                    <a href="listagem-anuncios.php" class="btn btn-link text-decoration-none text-primary fw-bold px-2">Meus Anúncios</a>
+                    <a href="actions/logout_action.php" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
                 </nav>
             </div>
         </div>
@@ -30,7 +31,7 @@
                 <h2 class="h4 fw-bold text-dark mb-1">Meus Anúncios</h2>
                 <p class="text-muted mb-0">Veículos que você já cadastrou no Big Motors.</p>
             </div>
-            <a href="novo-anuncio.html" class="btn btn-primary mt-3 mt-md-0">+ Novo Anúncio</a>
+            <a href="novo-anuncio.php" class="btn btn-primary mt-3 mt-md-0">+ Novo Anúncio</a>
         </div>
 
         <div class="d-flex flex-column gap-3" id="listaMeusAnuncios">
@@ -47,8 +48,8 @@
                         <p class="text-muted small mb-0">Ano 2021</p>
                     </div>
                     <div class="col-12 col-sm-4 d-flex flex-column flex-sm-row gap-2 justify-content-sm-end">
-                        <a href="detalhe-anuncio.html?id=1" class="btn btn-outline-primary btn-sm">Detalhes</a>
-                        <a href="listagem-interesses.html?id=1" class="btn btn-outline-secondary btn-sm">Interesses</a>
+                        <a href="detalhe-anuncio.php?id=1" class="btn btn-outline-primary btn-sm">Detalhes</a>
+                        <a href="listagem-interesses.php?id=1" class="btn btn-outline-secondary btn-sm">Interesses</a>
                         <button type="button" class="btn btn-outline-danger btn-sm">Excluir</button>
                     </div>
                 </div>
@@ -66,8 +67,8 @@
                         <p class="text-muted small mb-0">Ano 2018</p>
                     </div>
                     <div class="col-12 col-sm-4 d-flex flex-column flex-sm-row gap-2 justify-content-sm-end">
-                        <a href="detalhe-anuncio.html?id=2" class="btn btn-outline-primary btn-sm">Detalhes</a>
-                        <a href="listagem-interesses.html?id=2" class="btn btn-outline-secondary btn-sm">Interesses</a>
+                        <a href="detalhe-anuncio.php?id=2" class="btn btn-outline-primary btn-sm">Detalhes</a>
+                        <a href="listagem-interesses.php?id=2" class="btn btn-outline-secondary btn-sm">Interesses</a>
                         <button type="button" class="btn btn-outline-danger btn-sm">Excluir</button>
                     </div>
                 </div>
@@ -85,8 +86,8 @@
                         <p class="text-muted small mb-0">Ano 2023</p>
                     </div>
                     <div class="col-12 col-sm-4 d-flex flex-column flex-sm-row gap-2 justify-content-sm-end">
-                        <a href="detalhe-anuncio.html?id=3" class="btn btn-outline-primary btn-sm">Detalhes</a>
-                        <a href="listagem-interesses.html?id=3" class="btn btn-outline-secondary btn-sm">Interesses</a>
+                        <a href="detalhe-anuncio.php?id=3" class="btn btn-outline-primary btn-sm">Detalhes</a>
+                        <a href="listagem-interesses.php?id=3" class="btn btn-outline-secondary btn-sm">Interesses</a>
                         <button type="button" class="btn btn-outline-danger btn-sm">Excluir</button>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/auth_check.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Motors - Novo Anúncio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-light py-5">
 
-    <!-- Cabeçalho da área restrita (com nav e botão de logoff) -->
     <header class="card shadow-sm p-3 mb-4 bg-white container">
         <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
@@ -17,8 +17,8 @@
             </div>
             <div class="col-12 col-md-6 text-center text-md-end">
                 <nav>
-                    <a href="listagem-anuncios.html" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
-                    <a href="pagina-principal-externa.html" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
+                    <a href="listagem-anuncios.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
+                    <a href="actions/logout_action.php" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
                 </nav>
             </div>
         </div>
@@ -32,10 +32,9 @@
                     <h2 class="h4 mb-4 fw-bold text-dark">Inserir Novo Anúncio</h2>
                     <p class="text-muted mb-4">Preencha os dados do veículo que deseja anunciar.</p>
 
-                    <form id="formAddVeiculo">
+                    <form id="formAddVeiculo" action="actions/novo_anuncio_action.php" method="POST" enctype="multipart/form-data">
                         <div class="row g-3">
 
-                            <!-- Marca e Modelo -->
                             <div class="col-md-6">
                                 <label for="marcaSelect" class="form-label small fw-semibold text-muted">Marca</label>
                                 <select required class="form-select" id="marcaSelect" name="marca">
@@ -58,7 +57,6 @@
                                 <input type="text" id="inputModelo" name="modelo" required class="form-control" placeholder="ex: Gol, Civic, Onix">
                             </div>
 
-                            <!-- Ano, Cor e Quilometragem -->
                             <div class="col-md-4">
                                 <label for="inputAno" class="form-label small fw-semibold text-muted">Ano</label>
                                 <input type="number" class="form-control" id="inputAno" name="ano" placeholder="2020" required>
@@ -74,7 +72,6 @@
                                 <input type="number" required class="form-control" placeholder="0" id="inputKm" name="km">
                             </div>
 
-                            <!-- Estado e Cidade -->
                             <div class="col-md-4">
                                 <label for="ufSelect" class="form-label small fw-semibold text-muted">Estado</label>
                                 <select required class="form-select" id="ufSelect" name="uf">
@@ -114,19 +111,16 @@
                                 <input required type="text" class="form-control" id="inputCidade" name="cidade" placeholder="Nome da cidade">
                             </div>
 
-                            <!-- Valor -->
                             <div class="col-md-12">
                                 <label for="inputValor" class="form-label small fw-semibold text-muted">Valor (R$)</label>
                                 <input type="text" class="form-control text-primary fw-bold" id="inputValor" name="valor" inputmode="decimal" placeholder="0,00" required>
                             </div>
 
-                            <!-- Descrição -->
                             <div class="col-12">
                                 <label for="txtDescricao" class="form-label small fw-semibold text-muted">Descrição</label>
                                 <textarea required class="form-control" id="txtDescricao" name="descricao" rows="3" placeholder="Fale sobre o estado do carro, opcionais, etc..."></textarea>
                             </div>
 
-                            <!-- Fotos (mínimo de 3 exigido) -->
                             <div class="col-12 mt-4">
                                 <h3 class="h6 fw-bold text-dark mb-2">Fotos</h3>
                                 <p class="text-muted small mb-3">Obrigatório enviar 3 imagens do veículo.</p>
@@ -145,7 +139,6 @@
                                 </div>
                             </div>
 
-                            <!-- Botão de submit -->
                             <div class="col-12 mt-3">
                                 <button type="submit" class="btn btn-primary w-100 py-2" id="btnSalvarAnuncio">Publicar</button>
                             </div>

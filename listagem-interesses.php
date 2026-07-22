@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/auth_check.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Motors - Interesses no Anúncio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-light py-5">
 
@@ -16,15 +17,15 @@
             </div>
             <div class="col-12 col-md-6 text-center text-md-end">
                 <nav>
-                    <a href="listagem-anuncios.html" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
-                    <a href="pagina-principal-externa.html" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
+                    <a href="listagem-anuncios.php" class="btn btn-link text-decoration-none text-secondary fw-semibold px-2">Meus Anúncios</a>
+                    <a href="actions/logout_action.php" class="btn btn-outline-danger btn-sm ms-2 px-3">Sair</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main class="container my-5">
-        <a href="detalhe-anuncio.html?id=1" class="text-decoration-none text-secondary small d-inline-block mb-3">&larr; Voltar para o anúncio</a>
+        <a href="detalhe-anuncio.php?id=1" class="text-decoration-none text-secondary small d-inline-block mb-3">&larr; Voltar para o anúncio</a>
 
         <h2 class="h4 fw-bold text-dark mb-1">Interesses recebidos</h2>
         <p class="text-muted mb-4">Honda Civic EXL - 2021</p>
